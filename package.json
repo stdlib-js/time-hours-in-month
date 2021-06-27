@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/time-hours-in-month",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Determine the number of hours in a month.",
   "license": "Apache-2.0",
   "author": {

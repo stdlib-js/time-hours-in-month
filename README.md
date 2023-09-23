@@ -18,25 +18,133 @@ limitations under the License.
 
 -->
 
+
+<details>
+  <summary>
+    About stdlib...
+  </summary>
+  <p>We believe in a future in which the web is a preferred environment for numerical computation. To help realize this future, we've built stdlib. stdlib is a standard library, with an emphasis on numerical and scientific computation, written in JavaScript (and C) for execution in browsers and in Node.js.</p>
+  <p>The library is fully decomposable, being architected in such a way that you can swap out and mix and match APIs and functionality to cater to your exact preferences and use cases.</p>
+  <p>When you use stdlib, you can be absolutely certain that you are using the most thorough, rigorous, well-written, studied, documented, tested, measured, and high-quality code out there.</p>
+  <p>To join us in bringing numerical computing to the web, get started by checking us out on <a href="https://github.com/stdlib-js/stdlib">GitHub</a>, and please consider <a href="https://opencollective.com/stdlib">financially supporting stdlib</a>. We greatly appreciate your continued support!</p>
+</details>
+
 # hoursInMonth
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
 > Determine the number of hours in a month.
 
+<section class="installation">
 
+## Installation
 
+```bash
+npm install @stdlib/time-hours-in-month
+```
 
+Alternatively,
 
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+-   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
 
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
 
+</section>
 
+<section class="usage">
 
+## Usage
 
+```javascript
+var hoursInMonth = require( '@stdlib/time-hours-in-month' );
+```
+
+#### hoursInMonth( \[month\[, year]] )
+
+Returns the number of hours in a month.
+
+```javascript
+var num = hoursInMonth();
+// returns <number>
+```
+
+By default, the function returns the number of hours in the current month of the current year (according to local time). To determine the number of hours for a particular month and year, provide `month` and `year` arguments.
+
+```javascript
+var num = hoursInMonth( 2 );
+// returns <number>
+
+num = hoursInMonth( 2, 2016 );
+// returns 696
+
+num = hoursInMonth( 2, 2017 );
+// returns 672
+```
+
+A `month` may be either a month's integer value, three letter abbreviation, or full name (case insensitive).
+
+```javascript
+var num = hoursInMonth( 2, 2016 );
+// returns 696
+
+num = hoursInMonth( 'feb', 2016 );
+// returns 696
+
+num = hoursInMonth( 'february', 2016 );
+// returns 696
+```
+
+The function also supports providing a [`Date`][date-object] object.
+
+```javascript
+var num = hoursInMonth( new Date() );
+// returns <number>
+```
+
+</section>
+
+<!-- /.usage -->
+
+<section class="notes">
+
+## Notes
+
+-   The function's return value is a generalization and does **not** take into account inaccuracies due to daylight savings conventions, crossing timezones, or other complications with time and dates. 
+
+</section>
+
+<!-- /.notes -->
+
+<section class="examples">
+
+## Examples
+
+<!-- eslint no-undef: "error" -->
+
+```javascript
+var hoursInMonth = require( '@stdlib/time-hours-in-month' );
+
+var v;
+var i;
+
+for ( i = 0; i < 2021; i++ ) {
+    v = hoursInMonth( 'feb', i );
+    console.log( 'In the year %d, February has %d hours.', i, v );
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+* * *
 
 <section class="cli">
 
-
+## CLI
 
 <section class="installation">
 
@@ -54,7 +162,7 @@ npm install -g @stdlib/time-hours-in-month-cli
 
 <section class="usage">
 
-## Usage
+### Usage
 
 ```text
 Usage: hours-in-month [options] [month] [year]
@@ -71,7 +179,7 @@ Options:
 
 <section class="examples">
 
-## Examples
+### Examples
 
 ```bash
 $ hours-in-month
@@ -104,9 +212,10 @@ $ hours-in-month 2 2016
 
 <section class="related">
 
+* * *
+
 ## See Also
 
--   <span class="package-name">[`@stdlib/time-hours-in-month`][@stdlib/time-hours-in-month]</span><span class="delimiter">: </span><span class="description">determine the number of hours in a month.</span>
 -   <span class="package-name">[`@stdlib/time-hours-in-year`][@stdlib/time/hours-in-year]</span><span class="delimiter">: </span><span class="description">determine the number of hours in a year according to the Gregorian calendar.</span>
 
 </section>
@@ -126,7 +235,7 @@ This package is part of [stdlib][stdlib], a standard library for JavaScript and 
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
-### Community
+#### Community
 
 [![Chat][chat-image]][chat-url]
 
@@ -149,11 +258,11 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <section class="links">
 
-[npm-image]: http://img.shields.io/npm/v/@stdlib/time-hours-in-month-cli.svg
-[npm-url]: https://npmjs.org/package/@stdlib/time-hours-in-month-cli
+[npm-image]: http://img.shields.io/npm/v/@stdlib/time-hours-in-month.svg
+[npm-url]: https://npmjs.org/package/@stdlib/time-hours-in-month
 
-[test-image]: https://github.com/stdlib-js/time-hours-in-month/actions/workflows/test.yml/badge.svg?branch=main
-[test-url]: https://github.com/stdlib-js/time-hours-in-month/actions/workflows/test.yml?query=branch:main
+[test-image]: https://github.com/stdlib-js/time-hours-in-month/actions/workflows/test.yml/badge.svg?branch=v0.1.0
+[test-url]: https://github.com/stdlib-js/time-hours-in-month/actions/workflows/test.yml?query=branch:v0.1.0
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/time-hours-in-month/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/time-hours-in-month?branch=main

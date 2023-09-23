@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import hoursInMonth from 'https://cdn.jsdelivr.net/gh/stdlib-js/time-hours-in-month@esm/index.mjs';
+import hoursInMonth from 'https://cdn.jsdelivr.net/gh/stdlib-js/time-hours-in-month@v0.1.0-esm/index.mjs';
 ```
 
 #### hoursInMonth( \[month\[, year]] )
@@ -113,7 +113,7 @@ var num = hoursInMonth( new Date() );
 <body>
 <script type="module">
 
-import hoursInMonth from 'https://cdn.jsdelivr.net/gh/stdlib-js/time-hours-in-month@esm/index.mjs';
+import hoursInMonth from 'https://cdn.jsdelivr.net/gh/stdlib-js/time-hours-in-month@v0.1.0-esm/index.mjs';
 
 var v;
 var i;

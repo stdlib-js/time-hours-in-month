@@ -42,6 +42,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import hoursInMonth from 'https://cdn.jsdelivr.net/gh/stdlib-js/time-hours-in-month@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/time-hours-in-month/tags). For example,
+
+```javascript
 import hoursInMonth from 'https://cdn.jsdelivr.net/gh/stdlib-js/time-hours-in-month@v0.2.2-esm/index.mjs';
 ```
 
@@ -113,7 +118,7 @@ var num = hoursInMonth( new Date() );
 <body>
 <script type="module">
 
-import hoursInMonth from 'https://cdn.jsdelivr.net/gh/stdlib-js/time-hours-in-month@v0.2.2-esm/index.mjs';
+import hoursInMonth from 'https://cdn.jsdelivr.net/gh/stdlib-js/time-hours-in-month@esm/index.mjs';
 
 var v;
 var i;
